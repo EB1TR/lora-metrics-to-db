@@ -1,0 +1,10 @@
+services:
+  lora-metrics-to-db:
+    container_name: lora-metrics-to-db
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      #ENV PUBLIC
+      - ./produccion.env
